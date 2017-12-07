@@ -1,12 +1,10 @@
-//
-//  Alphanumericless.c
-//  
-//
-//  Created by Ian Gerrit Feekes on 11/28/17.
-//
-//
-
-#include "Alphanumericless.h"
+//Alphanumericless.java
+//Codefights arcade
+//The Core
+//Lab of Transformations
+//#87
+//Created by Ian Feekes december 6th 2017
+//NOTE: This may have some println statements used for debugging purposes. Many have been commented out
 
 boolean alphanumericLess(String s1, String s2)
 {
@@ -88,7 +86,7 @@ boolean compare(ArrayList<String>arr, String a, String b)
     if((aInt)&&(!bInt))return true;
     else if((!aInt)&&(bInt))
     {
-        System.out.println("bug1");
+        //System.out.println("bug1");
         return false;
     }
     else if((aInt)&&(bInt)) //if both Strings are integers
@@ -118,15 +116,16 @@ boolean compare(ArrayList<String>arr, String a, String b)
     }
 }
 
-int convertToInt(String s)
+int convertToInt(String s)  //This is probably a library function but I decided to write it myself anyways
 {
     int toReturn = 0;
     int placeHolder = 1;
     for(int i=s.length()-1;i>=0;i--)
     {
         toReturn+=((int)s.charAt(i)-48)*placeHolder;
-        placeHolder*=10;
+    placeHolder*=10;
     }
     return toReturn;
 }
+
 
